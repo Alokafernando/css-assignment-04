@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Case-02</title>
+
+  <link rel="stylesheet" href="assets/lib/normalize.css">
+
+  <style>
+
+    body{
+      background: blue;
+    }
+
+    body>div{
+      aspect-ratio: 1/1;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    body>div:first-child{
+      width: 250px;
+      border-radius: 100%;
+      background-color: grey;
+      z-index: 5;
+      display: flex;
+    }
+
+    body>div:first-child>p{
+      color: white;
+      font-size: 28px;
+      position: absolute;
+      align-self: center;
+      left: 32%;
+    }
+
+    body>div:nth-child(2){
+      width: 150px;
+      border-top-left-radius: 100%;
+      background-color: darkred;
+      top: -150px;
+      left: -150px;
+      z-index: 4;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+
+      transition-duration: 3s;
+      transition-timing-function: ease;
+      transition-property: transform;
+    }
+
+    body>div:nth-child(3){
+      width: 300px;
+      border-radius: 100%;
+      background-color: white;
+    }
+
+    div:first-child:hover + div {
+      transform: rotate(405deg);
+    }
+
+  </style>
+
+
+</head>
+<body>
+
+  <div>
+    <p>RWAD</p>
+  </div>
+
+  <div></div>
+  <div></div>
+
+</body>
+</html>
